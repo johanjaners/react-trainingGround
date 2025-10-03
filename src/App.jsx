@@ -11,6 +11,11 @@ function AboutPage() {
     </>
   );
 }
+function Profile() {
+  return (
+    <img className="avatar" />
+  );
+}
 export default function MyApp() {
   return (
     <div>
