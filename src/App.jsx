@@ -43,7 +43,16 @@ const products = [
   {title: `Apple`, id: 3},
 ];
 
-
+function ShoppingList() {
+  const listItems = products.map(product =>
+    <li key={product.id}>
+      {product.title}
+    </li>
+    );  
+    return (
+      <ul>{listItems}</ul>
+    );
+}
 
 export default function App() {
   let isLoggedIn = false;
@@ -58,6 +67,7 @@ export default function App() {
       <MyButton />
       <Profile />
       <AboutPage />
+      <ShoppingList />
     </div>
   );
 }
