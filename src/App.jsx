@@ -3,6 +3,14 @@ function MyButton() {
     <button>I'm a button</button>
   );
 }
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />how do you do?</p>
+    </>
+  );
+}
 export default function MyApp() {
   return (
     <div>
