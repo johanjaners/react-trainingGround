@@ -1,3 +1,5 @@
+import './App.css'
+
 function MyButton() {
   return (
     <button>I'm a button</button>
@@ -11,16 +13,26 @@ function AboutPage() {
     </>
   );
 }
+
+const user = {
+    name: "Hedy Lamarr",
+    imageUrL: "https://i.imgur.com/yXOvdOSs.jpg",
+    imageSize: 90
+  };
+
 function Profile() {
   return (
-    <img 
-      className="avatar"
-      src="https://i.imgur.com/yXOvdOSs.jpg"
-      alt="Hedy Lamarr"
-    />
+    <>
+      <h1>{user.name}</h1>
+      <img 
+        className="avatar"
+        src={user.imageUrL}
+        alt={user.name}
+      />
+    </>
   );
 }
-export default function MyApp() {
+export default function App() {
   return (
     <div>
       <h1>Welcome to my app</h1>
