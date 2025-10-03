@@ -1,17 +1,7 @@
 import './App.css'
 import { useState } from 'react';
 
-function MyButton() {
-  const [count, setCount] = useState(0);
-  function handleClick() {
-    setCount(count + 1);
-  }
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-      </button>
-  );
-}
+
 function AboutPage() {
   return (
     <>
@@ -63,10 +53,21 @@ function ShoppingList() {
       <ul>{listItems}</ul>
     );
 }
-
+function MyButton({count, onClick}) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+      </button>
+  );
+}
 export default function App() {
   let isLoggedIn = false;
+  const [count, setCount] = useState(0);
   
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
       <h1>Welcome to my app</h1>
@@ -74,7 +75,10 @@ export default function App() {
       {isLoggedIn && <AdminPanel />}
       {!isLoggedIn && <LogInForm />}
 
-      <MyButton />
+      <h2>Counters that update together</h2>
+      
+      <MyButton count={count} onClick={handleClick}/>
+      <MyButton count={count} onClick={handleClick}/>
       <Profile />
       <AboutPage />
 
