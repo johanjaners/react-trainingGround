@@ -36,6 +36,15 @@ function Profile() {
 function AdminPanel() { return <h2>Welcome back!</h2>; }
 function LogInForm() { return <h2>Please log in</h2>; }
 
+
+const products = [
+  {title: `Cabbage`, id: 1},
+  {title: `Garlic`, id: 2},
+  {title: `Apple`, id: 3},
+];
+
+
+
 export default function App() {
   let isLoggedIn = false;
   
