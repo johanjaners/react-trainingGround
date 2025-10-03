@@ -13,7 +13,11 @@ function AboutPage() {
 }
 function Profile() {
   return (
-    <img className="avatar" />
+    <img 
+      className="avatar"
+      src="https://i.imgur.com/yXOvdOSs.jpg"
+      alt="Hedy Lamarr"
+    />
   );
 }
 export default function MyApp() {
