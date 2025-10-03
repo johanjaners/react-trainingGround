@@ -39,17 +39,26 @@ function LogInForm() { return <h2>Please log in</h2>; }
 export default function App() {
   let isLoggedIn = false;
 
+  {/*
   let content;
   if (isLoggedIn) {
     content = <AdminPanel />;
   } else {
     content = <LogInForm />;
   }
+  */}
   
   return (
     <div>
       <h1>Welcome to my app</h1>
-      {content}
+      {/*{content}*/}
+      
+      {isLoggedIn ? (
+        <AdminPanel />
+      ) : (
+        <LogInForm />
+      )}
+
       <MyButton />
       <Profile />
       <AboutPage />
