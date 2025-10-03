@@ -34,30 +34,15 @@ function Profile() {
 }
 
 function AdminPanel() { return <h2>Welcome back!</h2>; }
-function LogInForm() { return <h2>Please log in</h2>; }
 
 export default function App() {
-  let isLoggedIn = false;
-
-  {/*
-  let content;
-  if (isLoggedIn) {
-    content = <AdminPanel />;
-  } else {
-    content = <LogInForm />;
-  }
-  */}
+  let isLoggedIn = true;
   
   return (
     <div>
       <h1>Welcome to my app</h1>
-      {/*{content}*/}
       
-      {isLoggedIn ? (
-        <AdminPanel />
-      ) : (
-        <LogInForm />
-      )}
+      {isLoggedIn && <AdminPanel />}
 
       <MyButton />
       <Profile />
